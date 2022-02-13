@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test_hw.css">
+    <title>test_homework</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__row">
+                <div class="header__name">
+                    Front-End Advanced
+                    Mariia Kuzhydlo
+                </div>
+                <div class="img_wrapper">
+                    <img src="./img/LOGO2x.png" alt="coursorlogo">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Basic level</h1>
+            <h2>About commands</h2>
+            <ul>
+                <li><b>'git config --global user.name blabla'</b> - This command sets the author name respectively to be used with your commits.</li>
+                <li><b>'git config --global user.email blabal@bla'</b> - This command sets the author email address respectively to be used with your commits.</li>
+                <li><b>'git init [repository name]'</b> - This command is used to start a new repository.</li>
+                <li><b>'git status'</b> - This command lists all the files that have to be committed (files which were changed or added and as result they are not commited).</li>
+                <li><b>'git add [file]' / 'git add .'</b> This command adds a file to the staging area (проміжна область). We use '.' for addin all files at the same time.</li>
+                <li><b>'git commit -m “[ Type in the commit message]'</b> - This command records or snapshots the file permanently in the version history.(Save changes).</li>
+                <li><b>'git log'</b> - This command is used to list the version history for the current branch. (We can see all commits on that branch).</li>
+                <li><b>'git checkout [branch name]'</b> - This command is used to switch from one branch to another.</li>
+                <li><b>'git checkout -b [branch name] '</b> - This command creates a new branch and also switches to it.</li>
+                <li><b>'git branch'</b> - This command lists all the local branches in the current repository.</li>
+                <li><b>'git branch [branch name]'</b> - This command creates a new branch.</li>
+                <li><b>'git branch -d [branch name]'</b> - This command deletes the feature branch.</li>
+                <li><b>'git push [variable name (origin)] master'</b> - This command sends the committed changes of master branch to your remote repository. (Variable name in class was origin).</li>
+                <li><b>'git pull [Repository Link]'</b> - The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. The git pull command is actually a combination of two other commands, git fetch followed by git merge. In the first stage of operation git pull will execute a git fetch scoped to the local branch that HEAD is pointed at. Once the content is downloaded, git pull will enter a merge workflow. A new merge commit will be-created and HEAD updated to point at the new commit.</li> 
+                <li><b>'git merge [branch name]'</b> - This command merges the specified branch’s history into the current branch. (connects current branch with another [branch name]).</li>
+                <li><b>'git clone [url]'</b> - This command is used to obtain a repository from an existing URL (which we created firstly in Github).</li>
+            </ul>
+            <h2>About .gitignore file</h2>
+            <p>
+                When you make commits in a git repository, you choose which files to stage and commit by using 'git add FILENAME' and then git commit. But what if there are some files that you never want to commit? It's too easy to accidentally commit them (especially if you use git add . to stage all files in the current directory). That's where a .gitignore file comes in handy.
+                The .gitignore file is a text file that tells Git which files or folders to ignore in a project.
+                Here's how it works. A .gitignore file is a plain text file where each line contains a pattern for files/directories to ignore. Generally, this is placed in the root folder of the repository. However, we can put it in any folder in the repository and we can also have multiple .gitignore files. The patterns in the files are relative to the location of that .gitignore file.
+                Each new line should list an additional file or folder that I want Git to ignore.
+                The entries in this file can also follow a matching pattern. <br>
+                * is used as a wildcard match <br>
+                / is used to ignore pathnames relative to the .gitignore file <br>
+                # is used to add comments to a .gitignore file</p>
+            <h1>Advanced</h1>
+            <h2>About commands</h2>
+            <ul>
+                <li><b>'git revert'(recommended)</b> - The git revert command is used to roll back changes in the commit history of a repository. Instead of deleting a commit from the project history, this command will undo the changes made to it (to it commit) and add a new commit with the resulting content. As a result, history is not lost in Git, which is important to ensure consistent version history and reliable collaboration.
+                   (We like jump back to some commit -&gt; canсel changes which was commited there-&gt; resulting file save as new commit)</li>
+                <li><b>'git reset'(not recommended)</b> <p> Some important informations. <br>
+                    Three tree: 1.Working directory - can see file which was changed (can check with command 'git status'). <br>
+                   2. Indexed files - can see files which were indexed , it means were added with command 'git add' (can check with command 'git ls-files').<br>
+                   3. Commit list - can see list of all commits (can check with command 'git log').<br>
+                   
+                   The git reset command moves both the HEAD pointer and the branch pointer to the given commit. In addition to updating the commit pointers, the git reset command changes the state of three trees. The link pointer always changes, that is, the third tree, the commit tree, is updated. The command line arguments --soft, --mixed, and --hard determine how the trees of the indexed files partition and working directory should be changed.
+                   
+                   By default we have 'git reset --mixed HEAD'.<br>
+                   
+                   --hard.
+                   Passing the --hard parameter updates the commit history pointers to the specified commit. Then the trees of the indexed files and the working directory is reset to the specified commit. All previous pending changes in the indexed files section and working directory are discarded according to the state of the commit tree. This means that any work that was pending(waiting) in the indexed section and working directory will be lost. (Files which was changed (can see in tree 'working directory') and not added (not added in second tree 'Indexed files') will be discarded and lost).<br>
+                   
+                   --mixed.
+                    This is the default operating mode. The link pointers are updated. The tree of indexed files is reset to the state of the specified commit. Any changes that were canceled in the indexed files tree are moved to the tree of working directory (can see with 'git status').  So all files are available and we don`t lost any files and informations. <br>
+                   
+                   --soft.
+                   Passing the --soft argument updates the pointers and stops the reset operation there. The indexed files tree and working directory remain unchanged. A soft reset only affects the commit history.</p>
+           <p></p></li>
+                <li><b>'git rebase'</b> <p>Git rebase is a Git tool for pushing changes from one branch to another. The same functionality is provided by the 'git merge' command. A merging commits changes, always moving forward in the project history (doing a three-way merge and creating a new merge commit), while a rebase allows you to efficiently rewrite it. <br>
+       
+                   A 'git rebase base' is the replacement of one commit at the base of a branch with another, giving the impression that the branch has a new beginning. During this operation, Git creates new commits and applies them to the specified root, so it is important to understand that in reality a branch is always made up of completely new commits.
+                   Rebasing is performed primarily to maintain a linear project history. The accuracy (linearlity) of the history will play important role in finding the commit with the problem in Git.
+                    
+                   In standard mode, 'git rebase' will automatically take commits from the Current working branch and apply them at the end of the uploaded branch.
+                   'git rebase base' <br>
+                   The current branch is automatically rebased to the base of the base branch. To do this, you can use any link to the commit (for example, ID, branch name, tag, or relative link to HEAD). <br>
+                   
+                   To rebase interactively, add the -i (for interactive) argument to git rebase.
+                   Interactive rebasing allows complete control over the state of the project history. This mode will eliminate the need to blindly move commits to a new base and will allow individual commits to be modified as the operation is performed. This way you can clear your history by deleting, splitting and modifying commits in the existing sequence.</p></li>
+                <li><b>'git cherry-pick'</b> -  With the git cherry-pick command, you can pick a commit from one branch and apply it to another. <br>
+                   Let us assume we have a repository with the following branch state: a - 'b(branched)' - c - d (master)  , from b we have another new branch 'b' - e - f - g (new branch).  Then we must me shure that we are in master branch (can use 'git checkout master') and use command 'git cherry-pick f' , and after that branch will have a look : a - b(branched) - c - d - f (master). The f commit has been successfully picked (duplicated) from one branch into the master branch.</li>
+                <li><b>'git stash'</b>- We use git stash command for saving (recording) unconfirmed changes (indexed and non-indexed) in a separate repository in a local git area so we can return to them later. That is useful tools when we want to save some files, but don`t want to commit them. After 'git stash' working directory will be clean. For being stashed file firstly should be added by command 'git add name' (with 'add' command file is indexed , and without file is not indexed).
+                    (Also ignored files can`t be stashed, if we want to take into account untracked files so we should use <b> 'git stash -u'</b>).
+                   (Also if we want to add comment for stashed file we should use <b>'git stash save "comment"'</b>&gt;) </li>
+                <li><b>'git stash pop'</b>- For applying previously deferred changes. (And they will be deleted from stashed list, if we don`t want to delete from that list after applying we need to use <b>git stash apply</b>)
+               (By default it applies last stashed file, if we want to choose so we should to use 'git stash pop stash@{N}')</li>
+               <li><b>'git stash list'</b>- list stashed files (usually they are marked as WIP)</li>
+            </ul>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
