@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*, *::before, *::after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+nav, footer, header, aside{ display: block;}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input, button, textarea{font-family: inherit;}
+
+input::-ms-check{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{ list-style: none;}
+img{vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6{ font-size: inherit;
+    font-weight: 400;
+}
+body{
+    background: rgb(131,58,180);
+    background: url(./img/loop-arrows-svgrepo-com.svg) no-repeat bottom ,
+                linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,144,253,1) 79%, rgba(131,58,180,1) 100%); 
+}
+header{
+    border-bottom: 1px solid grey;
+    margin: 0px 0px 20px 0px;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.header__row {
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.haeder__cursor {
+    display: flex;
+    align-items: center;
+}
+.img-wrapper {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0px 20px 0px 0px;
+}
+.img-wrapper > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header__title {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
+.header__student {
+    font-family: 'Handlee', cursive;
+    font-size: 18px;
+    padding: 5px 45px 5px 0px ;
+    background: url(../1hw_variables/img/icons8-linkedin.svg) no-repeat right lightyellow;
+    border: 1px solid orangered;
+    border-radius: 10px;
+}
+.header__student span{
+    color: blue;
+}
+.header__student span:hover{
+    color: orange;
+}
+.animation {
+    text-align: center;
+    border-width: 4px 0;
+    padding: 1.5em 0em;
+    position: absolute;
+    margin: 70px 0px 0px 60px;
+  }
+.animation span {
+    text-transform: uppercase;
+    font: 700 4em/1 "Oswald", sans-serif;
+    display: block;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.9);
+    animation: bounce-top 2s infinite both;
+    font-family: 'Titan One', cursive;
+    }
+  
+  
+@keyframes bounce-top {
+    0% {
+      transform: translateY(-45px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-24px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateY(-12px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateY(-6px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateY(-4px);
+      animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+    }
+   
+  }
