@@ -5,13 +5,17 @@ let N , M ;
 //Object.is()method determines whether two values are the same value
 function inputN(){
     do{
-        N = +prompt("My dear friend, please enter FIRST integer number", "enter here");  
+        N = +prompt("My dear friend, please enter FIRST integer number", "enter here"); 
+        if ((N !== parseInt(N)) || (Object.is(NaN , N) === true))
+        alert("It is not a integer number! Try again!")
     } while ((N !== parseInt(N)) || (Object.is(NaN , N) === true))  
 }
 
 function inputM(){
     do{
-        M = +prompt("My dear friend, please enter SECOND integer number", "enter here");  
+        M = +prompt("My dear friend, please enter SECOND integer number", "enter here"); 
+        if ((M !== parseInt(M)) || (Object.is(NaN , M) === true))
+        alert("It is not a integer number! Try again!") 
     } while ((M !== parseInt(M)) || (Object.is(NaN , M) === true)) 
 }
 
