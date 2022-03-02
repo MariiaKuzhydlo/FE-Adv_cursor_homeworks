@@ -22,11 +22,12 @@ function powFirst(x , n) {
 
 
 function powSecond(x , n){
-    if (n == 1) {
-        return x;
-      } else {
-        return x * powSecond(x, n - 1);
+     if (n == 0){
+        return 1;
+      }else if (n<0){
+        return 1 / powSecond(x, -1 * n);
       }
+      return (n == 1) ? x : x * powSecond(x, n - 1);
 }
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
