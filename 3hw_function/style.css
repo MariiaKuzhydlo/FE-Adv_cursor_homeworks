@@ -78,7 +78,7 @@ header{
     font-family: 'Handlee', cursive;
     font-size: 18px;
     padding: 5px 45px 5px 0px ;
-    background: url(../1hw_variables/img/icons8-linkedin.svg) no-repeat right lightyellow;
+    background: url(./img/icons8-linkedin.svg) no-repeat right lightyellow;
     border: 1px solid orangered;
     border-radius: 10px;
 }
