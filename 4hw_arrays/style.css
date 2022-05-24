@@ -88,3 +88,9 @@ header{
 .header__student span:hover{
     color: orange;
 }
+main {
+    padding: 0px 50px;
+}
+p{
+    font-size: 20px;
+}
