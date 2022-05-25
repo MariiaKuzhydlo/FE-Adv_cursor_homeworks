@@ -40,7 +40,7 @@ const firstLetterToUpperCase = (userName) => userName[0].toUpperCase()+userName.
 //4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 //const tax = (salary, taxRate ) => salary - salary * (parseFloat(taxRate) / 100);
 function tax(salary, taxRate){
-   let getTax = salary - salary * (parseFloat(taxRate) / 100);
+   const getTax = salary - salary * (parseFloat(taxRate) / 100);
    if (taxRate == '' || salary == ''){
        return "please enter all data"
    } else {
@@ -92,12 +92,10 @@ function  convertCurrency(money, exchangeRate ) {
 /*8.Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.*/
 function  getRandomPassword(length = 8) {
-    let pas = [];
-    let i=1;
-    while(i<=length){
-        pas.push(Math.trunc(Math.random()*10))
-        i++;
-    }return +pas.join('');
+    let pas = '';
+    for(let i=0; i<length; i++){
+        pas +=Math.trunc(Math.random()*10)
+    }return pas;
 }
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -118,12 +116,13 @@ function isPalyndrom(str){
             isTheSame++;
         }
     }
-    if (isTheSame == shouldBeTheSame) {
+    /*if (isTheSame == shouldBeTheSame) {
         return true;
     }
     else{
         return false;
-    }
+    }*/
+    return isTheSame === shouldBeTheSame ;
 }
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
