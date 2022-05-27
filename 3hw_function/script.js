@@ -116,12 +116,6 @@ function isPalyndrom(str){
             isTheSame++;
         }
     }
-    /*if (isTheSame == shouldBeTheSame) {
-        return true;
-    }
-    else{
-        return false;
-    }*/
     return isTheSame === shouldBeTheSame ;
 }
 
