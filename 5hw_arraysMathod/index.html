@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style/style.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" defer></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="header__row">
+				<div class="haeder__cursor">
+					<div class="img-wrapper">
+						<img src="/img/LOGO2x.png" alt="logo-cursor">
+					</div>
+					<div class="header__title">
+						Cursor / Front-End Advanced "Legion of Super-Heroes" <br>
+						hw5 - Arrays Mathod
+					</div>
+				</div>
+				<div class="header__student">
+					<a href="https://www.linkedin.com/in/mariia-kuzhydlo-a570bb229/" target="blank">
+						<span> Mariia Kuzhydlo</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="container">
+		<section class="tasks">
+			<div class="task">
+				<h1>Task 1</h1>
+				<p>Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел. </p>
+				<ul>
+					<li>
+						<input type="number" id="arrLength" placeholder="Enter length">
+						<input type="number" id="minNumber" placeholder="Enter min number">
+						<input type="number" id="maxNumber" placeholder="Enter max number">
+						<p>
+							<button type="button" onclick="getResult1()">Get Result</button>
+							<span class="result" id='Result1'>[]</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 2</h1>
+				<p>Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ
+					ЧИСЛА ІГНОРУЮТЬСЯ</p>
+				<ul>
+					<li>
+						<input type="text" id="arrNumbers" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult2()">Get Result</button>
+							<span class="result" id='Result2'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="task">
+				<h1>Task 3</h1>
+				<p>Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне всіх переданих в неї аргументів.
+					НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ</p>
+				<ul>
+					<li>
+						<input type="text" id="arrNumbersAvarage" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult3()">Get Result</button>
+							<span class="result" id='Result3'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 4</h1>
+				<p>Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів.
+					НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ</p>
+				<ul>
+					<li>
+						<input type="text" id="arrNumbersMedian" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult4()">Get Result</button>
+							<span class="result" id='Result4'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 5</h1>
+				<p>Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="arrfilterEvenNumbers" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult5()">Get Result</button>
+							<span class="result" id='Result5'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 6</h1>
+				<p>Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="arrPositiveNumbers" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult6()">Get Result</button>
+							<span class="result" id='Result6'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="task">
+				<h1>Task 7</h1>
+				<p>Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки
+					ті, які діляться на ціло на 5
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="arrDividedByFiveNumbers" placeholder="Enter numbers by ,">
+						<p><button type="button" onclick="getResult7()">Get Result</button>
+							<span class="result" id='Result7'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 8</h1>
+				<p>Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на
+					зірочки (*). При вирішенні цього завдання необхідно розбити масив на слова за допомогою функції .split("
+					"), після чого масив необхідно буде склеїти .join(" ") Погані слова: shit та fuck. Передбачте можливість
+					розширювати список цих слів у майбутньому.
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="strReplaceBadWords" placeholder="Enter string">
+						<input type="text" id="addBadWord" placeholder="Enter new Bad Word">
+						<p><button type="button" onclick="getResult8()">Get Result</button>
+							<span class="result" id='Result8'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="task">
+				<h1>Task 9</h1>
+				<p>Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви. Якщо букв
+					менше трьох – не розбиває. Пробіли завжди видаляються. Рядок приводится до нижнього регістру.
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="wordForDivide" placeholder="Enter Word">
+						<p><button type="button" onclick="getResult9()">Get Result</button>
+							<span class="result" id='Result9'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="task">
+				<h1>Task 10</h1>
+				<p>Створіть функцію generateCombinations(word), яка видасть всі можливі перестановки(унікальні, без
+					повторень) букв в слові. Для тестів не передавайте слова в яких більше 10 букв. Краще взагалі обмежити
+					работу функції 10 буквами.
+				</p>
+				<ul>
+					<li>
+						<input type="text" id="wordForCombination" placeholder="Enter Word">
+						<p><button type="button" onclick="getResult10()">Get Result</button>
+							<span class="result" id='Result10'></span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>
