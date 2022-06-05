@@ -126,9 +126,10 @@ const generateCombinations = (word) => {
 	if (word.length > 10) {
 		return "Too long word"
 	}
-	if (word.length <= 2) return word.length === 2 ? [word[0] + word[1], word[1] + word[0]] : [word];
+	if (word.length <= 2) return word.length === 2 ? [word[0] + word[1], word[1] + word[0]].filter((el, pos, arr) => arr.indexOf(el) === pos) : [word];
 	return word.split('').reduce((accumulator, letter, i) =>
-		accumulator.concat(generateCombinations(word.slice(0, i) + word.slice(i + 1)).map(val => letter + val)), []);
+		accumulator.concat(generateCombinations(word.slice(0, i) + word.slice(i + 1)).map(val => letter + val)), [])
+		.filter((el, pos, arr) => arr.indexOf(el) === pos);
 }
 
 
