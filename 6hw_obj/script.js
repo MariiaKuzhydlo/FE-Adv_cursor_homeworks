@@ -129,6 +129,6 @@ function calculateWordLetters(string) {
 	return res;
 }
 
-console.log('/---------- 5 ----------/');
+console.log('/---------- 6 ----------/');
 console.log('calculateWordLetters("тест") ==>', calculateWordLetters("тест"));
 console.log('calculateWordLetters("дезоксиребуноклеїнова") ==>', calculateWordLetters("дезоксиребуноклеїнова"));
