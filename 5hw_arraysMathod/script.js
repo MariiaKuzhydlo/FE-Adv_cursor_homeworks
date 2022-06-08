@@ -85,10 +85,10 @@ function replaceBadWords(string, censor) {
 	}
 	const badWords = ['fuck', 'shit'];
 	if (censor !== '') {
-		censor.split(',').forEach(item => badWords.push(item.trim()));
+		censor.toLowerCase().split(',').forEach(item => badWords.push(item.trim()));
 	}
 
-	const wordsArray = string.split(' ');
+	const wordsArray = string.toLowerCase().split(' ');
 	const res = wordsArray.map(function (el) {
 		for (let badItem of badWords) {
 			if (el.search(badItem) !== -1) {
