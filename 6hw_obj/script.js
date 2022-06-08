@@ -44,8 +44,8 @@ function getSubjects(studentIndex) {
 
 console.log('/---------- 1 ---------/');
 console.log('getSubjects(0) ==>', getSubjects(0));
-console.log('getSubjects(2) ==>', getSubjects(1));
-console.log('getSubjects(4) ==>', getSubjects(2));
+console.log('getSubjects(1) ==>', getSubjects(1));
+console.log('getSubjects(2) ==>', getSubjects(2));
 
 //2. Створіть функцію getAverageMark(students[0]) --> 3.79 – 
 //яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ. 
@@ -83,8 +83,8 @@ function getStudentInfo(studentIndex) {
 
 console.log('/---------- 3 ----------/');
 console.log('getStudentInfo(0) ==>', getStudentInfo(0));
-console.log('getStudentInfo(2) ==>', getStudentInfo(1));
-console.log('getStudentInfo(6) ==>', getStudentInfo(2));
+console.log('getStudentInfo(1) ==>', getStudentInfo(1));
+console.log('getStudentInfo(2) ==>', getStudentInfo(2));
 
 //4. Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – 
 //яка повертає імена студентів у алфавітному порядку.
