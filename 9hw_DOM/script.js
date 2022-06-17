@@ -1,8 +1,5 @@
-const getRandomColor = () => {
-	const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-	const color = "#" + randomColor;
-	return color;
-}
+const color = () => Math.floor(Math.random() * 256);
+const getRandomColor = () => `rgb(${color()} ${color()} ${color()})`;
 
 function generateBlocks() {
 	const colorsBlock = document.querySelector('.container');
@@ -14,11 +11,7 @@ function generateBlocks() {
 }
 
 function generateBlocksInterval() {
-	const colorsBlock = document.querySelector('.containerWithTimeOut');
-	for (let i = 1; i <= 25; i++) {
-		colorsBlock.insertAdjacentHTML('afterbegin', '<div class="squareWithTimeOut"></div>')
-	}
-	const square = document.querySelectorAll('.squareWithTimeOut');
+	const square = document.querySelectorAll('.square');
 	square.forEach((el) => setInterval(() => {
 		el.style.backgroundColor = getRandomColor();
 	}, 1000))

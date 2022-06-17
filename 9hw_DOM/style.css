@@ -36,15 +36,14 @@ h1, h2, h3, h4, h5, h6{ font-size: inherit;
 	font-weight: 600;
 }
 body{
-	background: rgb(238,174,223);
-	background: linear-gradient(90deg, rgba(238,174,223,1) 0%, rgba(148,166,233,1) 100%);
+	background: rgb(240, 240, 240);
+	/* background: linear-gradient(90deg, rgba(238,174,223,1) 0%, rgba(148,166,233,1) 100%); */
 }
 header{
 	border-bottom: 1px solid grey;
 	margin: 0px 0px 20px 0px;
 }
-.headerContainer,
-.mainContainer {
+.headerContainer {
 	max-width: 1300px;
 	margin: 0 auto;
 }
@@ -89,13 +88,16 @@ header{
 .header__student span:hover{
 	color: orange;
 }
-.containerWithTimeOut ,
+main{
+	display: flex;
+	justify-content: center;
+}
 .container{
 	display: grid;
 	grid-template-columns: repeat(5,50px);
 	grid-template-rows: repeat(5,50px);
 	border-radius: 20px;
-	margin: 50px;
+	margin:70px;
 }
 button{
 	padding: 15px;
