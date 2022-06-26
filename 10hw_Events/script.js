@@ -1,10 +1,10 @@
-const keyPrefix = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+const keyCode = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'];
 
 const getAudioNames = typeOfElements('Audio');
 const getKeyNames = typeOfElements('Key');
 
-const namesOfKey = getKeyNames(keyPrefix);
-const namesOfAudio = getAudioNames(keyPrefix);
+const namesOfKey = getKeyNames(keyCode);
+const namesOfAudio = getAudioNames(keyCode);
 
 const keyElements = getAllElement(namesOfKey);
 const audioElements = getAllElement(namesOfAudio);
@@ -25,7 +25,7 @@ document.addEventListener('keypress', checkPressedKey(audioElements, keyElements
 
 function typeOfElements(type) {
 	return function setPrefix(arr) {
-		return arr.map(el => `${el}${type}`)
+		return arr.map(el => `${type}${el}`)
 	}
 }
 
@@ -46,12 +46,12 @@ function createPairs(keys, audios) {
 
 function checkPressedKey(audioList, keyList) {
 	return function addEvent(event) {
-		if (keyPrefix.includes(event.key)) {
-			let audioForKeyBeenPressed = audioList.filter((el) => el.id[0] == event.key);
+		if (keyCode.includes(event.code.substr(3))) {
+			let audioForKeyBeenPressed = audioList.filter((el) => el.id[5] == event.code.substr(3));
 			deactivateAll(audioElements);
 			audioForKeyBeenPressed[0].play();
 			/*------- add/remove class active ---------*/
-			let keyElementForKeyBeenPressed = keyList.filter((el) => el.id[0] == event.key);
+			let keyElementForKeyBeenPressed = keyList.filter((el) => el.id[3] == (event.code.substr(3)));
 			removeClass(keyList, 'active');
 			addClass(keyElementForKeyBeenPressed[0], 'active');
 		}
