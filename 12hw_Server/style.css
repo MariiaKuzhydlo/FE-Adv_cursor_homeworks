@@ -1,0 +1,181 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*, *::before, *::after{
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+nav, footer, header, aside{ display: block;}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input, button, textarea{font-family: inherit;}
+
+input::-ms-check{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{ list-style: none;}
+img{vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6{ font-size: inherit;
+	font-weight: 600;
+}
+h1{
+	font-size: 30px;
+	margin: 0px 0px 30px 0px ;
+}
+body{
+	background: rgb(240, 240, 240);
+	font-family: 'Titan One', cursive;
+	display: flex;
+	flex-direction: column;
+}
+main{
+	flex-grow: 1;
+}
+header{
+	border-bottom: 1px solid grey;
+	margin: 0px 0px 20px 0px;
+}
+.headerContainer {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+.header__row {
+	padding: 15px 0px 15px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.haeder__cursor {
+	display: flex;
+	align-items: center;
+}
+.img-wrapper {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	margin: 0px 20px 0px 0px;
+}
+.img-wrapper > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.header__title {
+	font-family: 'Patrick Hand', cursive;
+	font-weight: bold;
+	font-size: 30px;
+}
+.header__student {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 18px;
+	padding: 5px 45px 5px 0px ;
+	background: url(./img/logo/icons8-linkedin.svg)no-repeat right lightyellow ;
+	border: 1px solid orangered;
+	border-radius: 10px;
+}
+.header__student span{
+	color: blue;
+}
+.header__student span:hover{
+	color: orange;
+}
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.films{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 3px solid black;
+	margin: 0px 0px 40px 0px;
+}
+
+#filmsGetInfo{
+	margin: 0px 0px 20px 0px;
+	text-align: center;
+	height: 40px;
+	border: 1px solid blue;
+	border-radius: 20px;
+	font-size: 18px;
+	font-family: 'Titan One', cursive;
+}
+.sw-button,
+.getPlanets,
+.getNext,
+.getPrevious{
+	margin: 0px 0px 30px 0px;
+	font-size: 16px;
+	background-color: rgb(161, 209, 252);
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+.gender > img {
+	width: 20px;
+	height: 20px;
+
+}
+#infoAboutFilms{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	justify-content: space-between;
+	text-align: center;
+	
+}
+.characterCard{
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 30px 0px;
+   font-size: 20px;
+}
+.name,
+.birth{
+	margin: 0px 20px 0px 0px;
+}
+
+.planets{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0px 0px 20px 0px ;
+}
+
+.planetName{
+	margin: 0px 0px 20px 0px;
+	text-align: center;
+	
+}
+.planetsBtn{
+	display: flex;
+	margin: 0px 0px 20px 0px;
+	justify-content: space-around;
+}
+.planetsBtn > button{
+	margin: 0px 10px 0px 0px;
+	width: 165px;
+}
+footer{
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-size: 40px;
+}

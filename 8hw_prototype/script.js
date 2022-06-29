@@ -76,7 +76,7 @@ class BudgetStudent extends Student {
 	constructor(university, course, fullName, isBudget, marks = [5, 4, 4, 5], isActive = true) {
 		super(university, course, fullName, marks = [5, 4, 4, 5], isActive = true)
 		this.isBugget = isBudget,
-			setInterval(this.getScholarship, 3000);
+			setInterval(this.getScholarship, 30000);
 	}
 	getScholarship = () => {
 		if (this.isActive && (this.getAverageMark >= 4)) {
