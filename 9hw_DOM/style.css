@@ -99,6 +99,11 @@ main{
 	border-radius: 20px;
 	margin:70px;
 }
+.mainContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 button{
 	padding: 15px;
 	text-transform: capitalize;
@@ -106,4 +111,5 @@ button{
 	background-color:rgb(255, 128, 0);
 	font-weight: 600;
    cursor: pointer;
+	max-width: 300px;
 }
