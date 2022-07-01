@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>13hw-generetor_MariiaKuzhydlo</title>
+</head>
+
+<body>
+	<header>
+		<div class="headerContainer">
+			<div class="header__row">
+				<div class="haeder__cursor">
+					<div class="img-wrapper">
+						<img src="./img/LOGO2x.png" alt="logo-cursor">
+					</div>
+					<div class="header__title">
+						Cursor / Front-End Advanced "Legion of Super-Heroes" <br>
+						hw13 - Generarot
+					</div>
+				</div>
+				<div class="header__student">
+					<a href="https://www.linkedin.com/in/mariia-kuzhydlo-a570bb229/" target="blank">
+						<span> Mariia Kuzhydlo</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<h1>Symbols. Generators. Iterators</h1>
+			<section class="task">
+				<h2>Task1</h2>
+				<p>Створіть нескінченний генератор ідентифікаторів. Повинен працювати наступним чином:
+					const idGenerator = createIdGenerator();
+					idGenerator.next().value -> 1
+					idGenerator.next().value -> 2
+					idGenerator.next().value -> 3
+					...
+				</p>
+				<button id="genIdBtn">To generate</button>
+				<div class="result">
+					<span>Result:</span>
+					<span class="result__info" id="getGenResInfo"></span>
+				</div>
+			</section>
+
+			<section class="task">
+				<h2>Task2</h2>
+				<p>Створіть генератор, який буде регулювати розміри шрифту для вашого сайту.
+					(Можна допрацювати, щоб реально змінював шрифт, але це не є обов'язковою умовою)
+					Працювати генератор буде наступним чином:
+					const fontGenerator = newFontGenerator(14); // 14 – стартове значення
+					fontGenerator.next("up").value -> 1
+					fontGenerator.next("up").value -> 16
+					fontGenerator.next("up").value -> 18
+					fontGenerator.next().value -> 18
+					fontGenerator.next("down").value -> 16
+					fontGenerator.next("down").value -> 14
+					fontGenerator.next("down").value -> 12
+					fontGenerator.next().value -> 12
+				</p>
+				<button id="getUpFontSizeBtn">Up</button>
+				<button id="getDownFontSizeBtn">Down</button>
+				<div class="result">
+					<span>Font-size:</span>
+					<span class="result__info" id="getGenFontSizeInfo"></span>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
