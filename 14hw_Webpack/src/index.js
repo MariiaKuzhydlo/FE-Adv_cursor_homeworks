@@ -1,4 +1,5 @@
 import './style/style.css'
+import "./assets/LOGO2x.png"
 import { getMaxDigit, } from "./modules/function.js"
 import { pairs } from "./modules/arrays.js"
 import { getRandomArray } from "./modules/arraysMathod.js"

@@ -1,16 +1,20 @@
 {
+	"homepage": "http://MariiaKuzhydlo.github.io/FE-Adv_cursor_homeworks",
 	"name": "14hw_webpack",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack --config webpack.config.js"
+		"build": "webpack --config webpack.config.js",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"css-loader": "^6.7.1",
+		"gh-pages": "^4.0.0",
 		"style-loader": "^3.3.1",
 		"webpack": "^5.73.0",
 		"webpack-cli": "^4.10.0"
