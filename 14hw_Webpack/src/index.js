@@ -11,7 +11,6 @@ import { getSubjects } from "./modules/obj.js"
 import { getRandomChinese } from "./modules/promises.js"
 import { mariia } from "./modules/prototype.js"
 
-
 console.log(`1) MaxDigit of 3458 : ${getMaxDigit(3458)}`)
 console.log(`2) Pairs of student : ${JSON.stringify(pairs)}`)
 console.log(`3) Random array : [${getRandomArray(7, 2, 15)}]`)
